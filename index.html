@@ -726,6 +726,7 @@ function renderKontakte() {
       <td>${k.firma || '–'}</td>
       <td>${k.email || '–'}</td>
       <td>${k.tel || '–'}</td>
+      <td>${k.mobil || '–'}</td>
       <td>${statusBadge(k.status)}</td>
       <td onclick="event.stopPropagation()">
         <div class="actions">
@@ -774,6 +775,7 @@ function saveKontakt() {
       status: document.getElementById('k-status').value,
       email: document.getElementById('k-email').value.trim(),
       tel: document.getElementById('k-tel').value.trim(),
+      mobil: document.getElementById('k-mobil').value.trim(),
       adresse: document.getElementById('k-adresse').value.trim(),
     });
     const n = document.getElementById('k-notiz').value.trim();
@@ -787,6 +789,7 @@ function saveKontakt() {
       status: document.getElementById('k-status').value,
       email: document.getElementById('k-email').value.trim(),
       tel: document.getElementById('k-tel').value.trim(),
+      mobil: document.getElementById('k-mobil').value.trim(),
       adresse: document.getElementById('k-adresse').value.trim(),
       notes: n ? [{ text: n, date: now() }] : [],
     });
@@ -846,6 +849,7 @@ function openDetail(id) {
     <div class="detail-grid">
       <div class="detail-field"><label>Firma</label><p>${k.firma || '–'}</p></div>
       <div class="detail-field"><label>Telefon</label><p>${k.tel || '–'}</p></div>
+      <div class="detail-field"><label>Mobiltelefon</label><p>${k.mobil || '–'}</p></div>
       <div class="detail-field"><label>Adresse</label><p>${k.adresse || '–'}</p></div>
       <div class="detail-field"><label>Erstellt am</label><p>${fmtDate(k.created)}</p></div>
     </div>
