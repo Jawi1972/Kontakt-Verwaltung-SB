@@ -708,7 +708,7 @@ function renderKontakte() {
   const sort = document.getElementById('sort-by').value;
 
   let list = kontakte.filter(k => {
-    const match = `${k.vorname} ${k.nachname} ${k.email} ${k.firma}`.toLowerCase().includes(q);
+    const match = `${k.vorname} ${k.nachname} ${k.email} ${k.firma} ${k.mobil}`.toLowerCase().includes(q);
     const st = !status || k.status === status;
     return match && st;
   });
