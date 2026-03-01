@@ -755,7 +755,7 @@ function openKontaktModal(id = null) {
     document.getElementById('k-adresse').value = k.adresse || '';
     document.getElementById('k-notiz').value = '';
   } else {
-    ['k-vorname','k-nachname','k-firma','k-email','k-tel','k-adresse','k-notiz'].forEach(id => document.getElementById(id).value = '');
+    ['k-vorname','k-nachname','k-firma','k-email','k-tel','k-mobil','k-adresse','k-notiz'].forEach(id => document.getElementById(id).value = '');
     document.getElementById('k-status').value = 'Aktiv';
   }
   document.getElementById('kontakt-overlay').classList.add('open');
